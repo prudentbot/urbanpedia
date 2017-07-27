@@ -9,6 +9,10 @@ import sanitize from 'sanitize-html';
 
 Meteor.methods({
   'articles.insert'(title, dirty_body) {
+
+    if(! Meteor.userId)
+      return;
+
     check(title, String);
 
     const body = sanitize(dirty_body);
