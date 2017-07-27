@@ -5,10 +5,13 @@ import { check } from 'meteor/check';
 import { Articles } from './articles.js';
 
 import slug from 'slug';
+import sanitize from 'sanitize-html';
 
 Meteor.methods({
-  'articles.insert'(title, body) {
+  'articles.insert'(title, dirty_body) {
     check(title, String);
+
+    const body = sanitize(dirty_body);
     check(body, String);
 
     const url = slug(title);

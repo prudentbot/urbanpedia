@@ -9,7 +9,6 @@ Template.App_view.onCreated(function () {
   Meteor.subscribe('articles.all');
 });
 
-
 Template.App_view.helpers({
   article() {
     const url = FlowRouter.getParam('url');

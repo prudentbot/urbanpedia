@@ -1,11 +1,18 @@
 <template name="App_new">
   <h1> new </h1>
 
-  <form class="article-add">
-    <input type="text" name="title" placeholder="Title" required>
-    <textarea name="body" placeholder="start typing ..." required></textarea>
+  <!-- <form class="article-add">
     <input type="submit" name="submit" value="Add a new Article">
-  </form>
+  </form> -->
 
+  <input id="article-title" type="text" name="title" placeholder="Title" required>
+
+  <div id="article-body-editor">
+    <p>Hello World!</p>
+    <p>Some initial <strong>bold</strong> text</p>
+    <p><br></p>
+  </div>
+
+  <button id="article-submit"> Add a new article </button>
 
 </template>
