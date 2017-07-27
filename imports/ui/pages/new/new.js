@@ -24,13 +24,12 @@ Template.App_new.events({
     const title = document.getElementById("article-title").value;
     const body = document.getElementById("article-body-editor").firstChild.innerHTML;
 
-    console.log(body);
     Meteor.call('articles.insert', title, body, (error) => {
       if (error) {
         alert(error.error);
       } else {
         // console.log("success!");
-        window.location.href = "/";
+        FlowRouter.go('/');
       }
     });
   },
