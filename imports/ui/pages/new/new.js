@@ -22,7 +22,7 @@ Template.App_new.onRendered(function () {
 Template.App_new.events({
   'click #article-submit'(event) {
     const title = document.getElementById("article-title").value;
-    const body = document.getElementById("article-body-editor").firstChild.innerHTML
+    const body = document.getElementById("article-body-editor").firstChild.innerHTML;
 
     console.log(body);
     Meteor.call('articles.insert', title, body, (error) => {
