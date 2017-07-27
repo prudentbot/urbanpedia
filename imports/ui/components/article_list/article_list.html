@@ -1,0 +1,11 @@
+<template name="article_list">
+  <h3> Article List </h3>
+  <div>
+    <a href="/new">new</a>
+  </div>
+
+  {{#each articles}}
+    <p> {{title}} </p>
+  {{/each}}
+
+</template>
