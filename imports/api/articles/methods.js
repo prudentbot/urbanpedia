@@ -12,7 +12,7 @@ Meteor.methods({
     check(body, String);
 
     const url = slug(title);
-    const count = Articles.find({url:url}).count() + 1;
+    const count = (Articles.find({url:url}).count() + 1).toString();
 
     return Articles.insert({
       title,
