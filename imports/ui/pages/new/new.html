@@ -5,11 +5,10 @@
     <div>
       <input id="article-title" type="text" name="title" placeholder="Title" required>
 
-      <div id="article-body-editor">
-        <p>Hello World!</p>
-        <p>Some initial <strong>bold</strong> text</p>
-        <p><br></p>
-      </div>
+      {{> editor}}
+
+      <h5> Tag what your article is about.  The tags influence search results</h5>
+      <input type="text" id="article-input-tags">
 
       <button id="article-submit"> Add a new article </button>
     </div>
